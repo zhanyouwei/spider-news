@@ -1,0 +1,30 @@
+{
+  "name": "spider-news",
+  "version": "1.0.0",
+  "description": "spider-news",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanyouwei/spider-news.git"
+  },
+  "keywords": [
+    "spider",
+    "node"
+  ],
+  "author": "zhanyouwei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhanyouwei/spider-news/issues"
+  },
+  "homepage": "https://github.com/zhanyouwei/spider-news#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.9",
+    "superagent": "^1.8.2",
+    "underscore": "^1.8.3"
+  }
+}
