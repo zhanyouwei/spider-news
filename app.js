@@ -5,6 +5,9 @@
 
 var superAgent = require('superagent');
 var cheerio = require('cheerio');
+
+var dbUtils = require('./db');
+
 superAgent
 	.get('https://segmentfault.com/t/node.js/blogs')
 	.end(function (err, res) {
@@ -12,8 +15,18 @@ superAgent
 		$('.stream-list__item .blog-rank .plus')
 			.map(function (i, el) {
 				// this === el
-				console.log($(this).text().toString());
+				var data = {
+					address: 'https://segmentfault.com/t/node.js/blogs',
+					title: $(this).text().toString()
+				};
+				dbUtils.insert(data, function (error) {
+					if(error) {
+						throw error;
+					}
+				});
 				return $(this).text();
 			}).get().join(' ');
 	});
+
+
 
