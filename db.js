@@ -12,8 +12,9 @@ db.on('error', function (error) {
 
 // Schema 结构
 var newsSchema = new mongoose.Schema({
-  address: {type: String, default: '#'},
+  url: {type: String, default: '#'},
   title: {type: String},
+  zan: {type: String},
   time: {type: Date, default: Date.now}
 });
 
