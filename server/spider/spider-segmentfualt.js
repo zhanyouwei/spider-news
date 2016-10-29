@@ -24,8 +24,7 @@ superAgent
         var title = $(this).parent('.blog-rank').next().find('.title').text().trim();
         var data = {
           url: 'https://segmentfault.com' + $(this).parent('.blog-rank').next().find('.title a').attr('href'),
-          title: title,
-          zan: zan.trim().substr(0, 1)
+          title: title
         };
         dbUtils.insert(data, function (error) {
           if (error) {
